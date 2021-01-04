@@ -1,0 +1,162 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+
+}
+
+h5 {
+    padding-top: 15px;
+}
+
+.nav .open>a,
+.nav .open>a:hover,
+.nav .open>a:focus {
+    background-color: inherit;
+    padding: inherit;
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: #5B777F;
+    color: #fff;
+    transition: all 0.3s;
+
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #54B0CC;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #54B0CC;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: #5B777F;
+    background: #fff;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #54B0CC;
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+a[target="_blank"],
+.dotted {
+    border-bottom: 1px dashed #888;
+    cursor: pointer;
+}
+
+a[aria-expanded="false"]::after,
+a[aria-expanded="true"]::after {
+    content: ' \e259';
+    font-family: 'Glyphicons Halflings';
+    font-size: 0.6em;
+}
+
+.wrapper {
+    display: flex;
+}
+
+#content {
+    width: calc(100% - 250px);
+    padding: 40px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#sidebarCollapse {
+    float: right;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #content.active {
+        width: calc(100% - 250px);
+    }
+
+    #content {
+        width: 100%;
+    }
+
+    #sidebar {
+        margin-left: -250px;
+    }
+
+    #sidebar.active {
+        margin-left: 0;
+    }
+
+    #sidebarCollapse {
+        display: block;
+    }
+}
+
+.code-none {
+    color: #000000;
+    opacity: 0.3;
+    font-size: 90%;
+}
+
+.pb-3 {
+    padding-bottom: 3rem;
+}
