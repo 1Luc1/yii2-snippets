@@ -27,12 +27,15 @@
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",
-        "yiisoft/yii2-gii": "~2.2.0"
+        "yiisoft/yii2-gii": "~2.2.2"
     },
     "config": {
         "process-timeout": 1800,
         "fxp-asset": {
             "enabled": false
+        },
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true
         }
     },
     "scripts": {
